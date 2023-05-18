@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href=" {% static 'css/style.css'%}"/>
+    <link rel="stylesheet" href=" {% static 'css/privacy.css'%}"/>
+    <link rel="icon" href="{% static 'images/title2.png'%}" type="image/icon type" sizes="100x100">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+   <!-- bootstrap cdn -->
+       <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+  <!-- for video -->
+    <!-- <link rel="stylesheet" href="https://vjs.zencdn.net/c/video-js.css"/> -->
+
+    <title>RichFeyn</title>
+</head>
+<body>
+    <!-- navbar starts -->
+    <!-- navbar starts -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="{% static 'images/newlogo2.png'%}" alt="Logo Image">
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'home'%}">Home</a></li>
+            <li><a href="#hiw">How it works</a></li>
+            <!-- <li><a onclick="change()" href="#">Product demo</a></li> -->
+            <li><a  href="#">Product demo</a></li>
+            <li><a href="#faq">Faq</a></li>
+            <li><a href="#Footer">Contact Us</a></li>
+                        <li><a class="join-button" href=" {% url 'formview'%}">Preorder</a></li>
+
+        </ul>
+    </nav>
+    <br>
+    <!-- nav ends -->
+
+ 
+
+
+<!-- Privacy and Policy section -->
+<div class="faq">
+<div><h1   class="faq_head">Privacy and Policy</h1><br></div>
+<div class="content">
+
+  <details open>
+  <summary>SECTION 1 – WHAT DO WE DO WITH YOUR INFORMATION?</summary>
+  <div class="faq__content">
+    <p>
+
+<li>
+When you purchase something from our store, as part of the buying and selling process, we collect the personal information you give us such as your name, address and email address.
+</li><br>
+<li>
+When you browse our store, we also automatically receive your computer’s internet protocol (IP) address in order to provide us with information that helps us learn about your browser and operating system.
+
+</li><br>
+<li>
+Email marketing (if applicable): With your permission, we may send you emails about our store, new products and other updates.
+
+</li>
+</p>
+  </div>
+</details>
+<details>
+  <summary>SECTION 2 – CONSENT</summary>
+  <div class="faq__content">
+
+    <p>
+      <li>How do you get my consent?
+
+</li><br>
+When you provide us with personal information to complete a transaction, verify your credit card, place an order, arrange for a delivery or return a purchase, we imply that you consent to our collecting it and using it for that specific reason only.<br>
+
+If we ask for your personal information for a secondary reason, like marketing, we will either ask you directly for your expressed consent, or provide you with an opportunity to say no.<br><br>
+<li>
+How do I withdraw my consent?
+
+</li><br>
+If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at anytime, by contacting us at contact@richfeyn.com or mailing us at:<br>
+<br>
+Ubud Solutions (OPC) Private Limited,
+#1419, first floor, 39 Main, 9 Cross, J P Nagar, 1st phase, Bangalore-560078.
+</p>
+  </div>
+</details>
+<details>
+  <summary>SECTION 3 – DISCLOSURE</summary>
+  <div class="faq__content">
+    <p>We may disclose your personal information if we are required by law to do so or if you violate our Terms of Service.</p>
+  </div>
+</details>
+
+<details>
+  <summary>SECTION 4 – THIRD-PARTY SERVICES</summary>
+  <div class="faq__content">
+    <p>In general, the third-party providers used by us will only collect, use and disclose your information to the extent necessary to allow them to perform the services they provide to us.<br><br>
+
+However, certain third-party service providers, such as payment gateways and other payment transaction processors, have their own privacy policies in respect to the information we are required to provide to them for your purchase-related transactions.
+<br><br>
+For these providers, we recommend that you read their privacy policies so you can understand the manner in which your personal information will be handled by these providers.
+<br><br>
+In particular, remember that certain providers may be located in or have facilities that are located in a different jurisdiction than either you or us. So if you elect to proceed with a transaction that involves the services of a third-party service provider, then your information may become subject to the laws of the jurisdiction(s) in which that service provider or its facilities are located.
+<br><br>
+As an example, if you are located in China and your transaction is processed by a payment gateway located in India, then your personal information used in completing that transaction may be subject to disclosure under Indian legislation.
+<br><br>
+Once you leave our store’s website/app or are redirected to a third-party website or application, you are no longer governed by this Privacy Policy or our website’s Terms of Service.
+<br><br>
+When you click on links on our store, they may direct you away from our site. We are not responsible for the privacy practices of other sites and encourage you to read their privacy statements.</p>
+  </div>
+</details>
+<details>
+  <summary>SECTION 5 – SECURITY</summary>
+  <div class="faq__content">
+    <p>To protect your personal information, we take reasonable precautions and follow industry best practices to make sure it is not inappropriately lost, misused, accessed, disclosed, altered or destroyed.
+<br><br>
+If you provide us with your credit card information, the information is encrypted using secure socket layer technology (SSL) and stored with AES-256 encryption. Although no method of transmission over the Internet or electronic storage is 100% secure, we follow all PCI-DSS requirements and implement additional generally accepted industry standards.</p>
+  </div>
+</details>
+<details>
+  <summary>SECTION 6 – COOKIES</summary>
+  <div class="faq__content">
+    <p>Here is a list of cookies that we use. We’ve listed them here so that you can choose if you want to opt-out of cookies or not.
+<br><br>
+_session_id, unique token, session, Allows us to store information about your session (referrer, landing page, etc).
+<br><br>
+
+no data held, Persistent for 30 minutes from the last visit, Used by our website/app provider’s internal stats tracker to record the number of visits
+<br><br>
+
+no data held, expires midnight (relative to the visitor) of the next day, Counts the number of visits to a store by a single customer.
+<br><br>
+
+cart, unique token, persistent for 2 weeks, Stores information about the contents of your cart.
+<br><br>
+
+_secure_session_id, unique token, sessional storefront_digest, unique token, indefinite If the shop has a password, this is used to determine if the current visitor has access</p>
+  </div>
+</details>
+
+
+<details>
+  <summary>SECTION 7 – AGE OF CONSENT</summary>
+  <div class="faq__content">
+    <p>By using this site, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site.</p>
+  </div>
+</details>
+
+<details>
+  <summary>SECTION 8 – CHANGES TO THIS PRIVACY POLICY</summary>
+  <div class="faq__content">
+    <p>We reserve the right to modify this privacy policy at any time, so please review it frequently. Changes and clarifications will take effect immediately upon their posting on the website. If we make material changes to this policy, we will notify you here that it has been updated, so that you are aware of what information we collect, how we use it, and under what circumstances, if any, we use and/or disclose it.
+<br><br>
+If our store is acquired or merged with another company, your information may be transferred to the new owners so that we may continue to sell products to you.
+<br><br>
+
+QUESTIONS AND CONTACT INFORMATION
+<br><br>
+
+If you would like to: access, correct, amend or delete any personal information we have about you, register a complaint, or simply want more information contact our Privacy Compliance Officer at contact@richfeyn.com</p>
+  </div>
+</details>
+</div>
+</div>
+
+
+
+<!-- faq section ends here -->
+
+
+<!-- footer -->
+ <footer id="Footer" class="page-footer font-small stylish-color-dark pt-4">
+      <div  class="container text-center text-md-left">
+        <div class="row">
+          <div class="col-md-4 mx-auto">
+            <!-- Content -->
+            
+            <h5 style="display: flex; flex-direction: row !important; align-items: center; justify-content: center;" class="flex-row font-weight-bold mt-3 fs-4 mb-4">
+              
+              <div class="logo">
+            <img src="{% static 'images/newlogo2.png'%}" alt="Logo Image">
+        </div>
+              RichFeyn</h5>
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+            <p>Richfeyn sells smart containers that monitor daily use of almonds and pulses, and automatically reorder when stock runs low. The containers are synced with an app and cloud server, providing a seamless and convenient experience for healthy snacking. Join Richfeyn today to enjoy hassle-free access to nutritious food.</p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div id="link10" class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          
+            <h6 class="text-uppercase font-weight-bold mt-5">Useful links</h6>
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+            <p>
+              <a href="{% url 'privacy'%}" class="privacy">Privacy and Policy</a>
+            </p>
+
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase font-weight-bold mt-5">Contact</h6>
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p>
+              <i class="fas fa-home mr-3"></i> Mumbai, Maharashtra</p>
+            <p>
+              <i class="fas fa-envelope mr-3"></i> Reach us at contact@richfeyn.com</p>
+            <p>
+              <i class="fas fa-phone mr-3"></i> + 91 80254 52xxx</p>
+            <p>
+              <i class="fas fa-print mr-3"></i> + 91 80254 55xxx</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!-- Call to action -->
+      <ul  class="list-unstyled list-inline text-center py-2">
+        <li class="list-inline-item">
+          <h5 class="mb-1">Register for free</h5>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeP7PWrx9hIw5e6XWdNqCBRhQjBBCXhkO1zGxsa01DAJb_kAg/viewform" class="btn btn-outline-danger btn-rounded">Sign up!</a>
+        </li>
+      </ul>
+      <hr>
+      <!-- Social buttons -->
+      <div class="hover-effect1">
+      <ul   class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a href="https://www.facebook.com/codewithfaraz" title="Facebook"><i style="color:white;" class="fa fa-facebook"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.twitter.com/codewithfaraz" title="Twitter"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.instagram.com/codewithfaraz" title="Instagram"><i class="fa fa-instagram"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.youtube.com/@codewithfaraz" title="Youtube"><i class="fa fa-youtube"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#." title="Github"><i class="fa fa-github"></i></a>
+        </li>
+      </ul>
+    </div>
+      <!-- Copyright -->
+      <div   class="footer-copyright text-center py-3">
+       Made with love ❤
+      </div>
+    </footer>
+
+
+<!-- footer ends -->
+
+<!-- footer ends -->
+    <!--intro ends  -->
+
+
+  <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+      <script src="{% static 'js/script.js' %}"></script>
+    
+      <!-- <script src="https://vjs.zencdn.net/c/video.js"></script> -->
+          <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+           <script src="https://kit.fontawesome.com/4d0b4c932e.js" crossorigin="anonymous"></script>
+
+           <!-- jquery for fade -->
+   
+           
+</body>
+</html>
+

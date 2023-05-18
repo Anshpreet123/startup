@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href=" {% static 'css/style.css'%}"/>
+    <link rel="icon" href="{% static 'images/title2.png'%}" type="image/icon type" sizes="100x100">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+   <!-- bootstrap cdn -->
+       <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+  <!-- for video -->
+    <!-- <link rel="stylesheet" href="https://vjs.zencdn.net/c/video-js.css"/> -->
+
+    <title>RichFeyn</title>
+
+  
+</head>
+<body>
+    <!-- navbar starts -->
+    <nav id="navbar">
+        <div class="logo">
+            <img src="{% static 'images/newlogo2.png'%}" alt="Logo Image">
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'home'%}">Home</a></li>
+            <li><a href="#hiw">How it works</a></li>
+            <!-- <li><a onclick="change()" href="#">Product demo</a></li> -->
+            <li><a  href="#">Product demo</a></li>
+            <li><a href="#faq">Faq</a></li>
+            <li><a href="#Footer">Contact Us</a></li>
+            <li><a class="join-button" href=" {% url 'formview'%}">Preorder</a></li>
+        </ul>
+    </nav>
+    <br>
+    <!-- nav ends -->
+
+
+    <!-- intro -->
+
+    
+<div class="half-half-image-text">
+<div class="container mt-4">
+  <!-- <div class="row">
+    <div class="col-12">
+      <h1>Our Mission</h1>
+    </div>
+  </div> -->
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div class="content" style="display: flex;flex-direction: column !important;">
+        <h1 style="color: #fff; font-weight: 900 !important; 
+font-family: 'Lucida Sans Unicode','Lucida Grande','Lucida Sans','DejaVu Sans Condensed',sans-serif;">Never r​un out of kitchen supplies</h1><br>
+        <p >Ric​hFeyn comprises of smart containers which restocks automatically</p>
+        
+      </div>
+
+    </div>
+
+      <div id="vid_img" class="col-12 col-lg-6" style="gap:20px;">
+      <img class="img" style="width:50%; height: auto;" src="{% static 'images/File_0001.jpeg'%}">&nbsp&nbsp&nbsp
+      <img class="img"  style="width:40%; height: auto;" src="{% static 'images/home.png'%}">
+    </div>
+
+          <!-- alternate to show the video of the product -->
+<!-- 
+<div id="onlyvid"  class="video-wrapper">
+    <iframe src="https://www.youtube.com/embed/Zhawgd0REhA" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+</div> -->
+
+
+<!-- alternate to show the video of the product ends-->
+  </div>
+</div>
+  </div>
+
+
+
+
+<!-- intro ends -->
+
+    <!-- How it works sections -->
+<p id="hiw"></p>
+    <section   class ="main_contain"> 
+        <div class="main_head">
+        <h1  class="head_text" style="
+font-family: 'Lucida Sans Unicode','Lucida Grande','Lucida Sans','DejaVu Sans Condensed',sans-serif; font-weight: 800; color: #fff !important;" > How it works ?</h1><br>
+            <p class="head_content">Weight of food item in the containers can be viewed in an app. When the item is about to run out/about to expire, that item gets added to the cart or orders automatically</p>
+        </div>
+
+        <div class="flow_chart">  
+            <img class="flow_img" src="{% static 'images/flow.png'%}">
+        </div>
+
+    </section>
+
+<!-- how it works ends here -->
+
+<!-- carowsel pending -->
+    <div class="containers" data-autoplay="true">
+        <div class="slide"> <img
+                src="{% static 'images/carowsel/cr1.png'%}"
+                alt="nature" /></div>
+        <div class="slide">
+            <img src="{% static 'images/carowsel/cr2.png'%}"
+                alt="nature" />
+        </div>
+        
+        <div class="slide">
+            <img src="{% static 'images/carowsel/cr3.png'%}"
+                alt="nature" />
+        </div>
+
+
+        <button class="prev" onclick="prev()"><i class="fa fa-angle-left"></i></button>
+        <button class="next" onclick="next()"><i class="fa fa-angle-right"></i></button>
+
+
+    </div>
+    <div class="dots_containers" id="indicator"></div>
+
+<!-- carowsel ends here -->
+
+<!-- advantages of the product -->
+
+
+<section id="advertisers" class="advertisers-service-sec pt-5 pb-5">
+  <div class="container">
+    <!-- <div class="row">
+      <div class="section-header text-center">
+        <h2 class="fw-bold fs-1">
+          Our
+          <span class="b-class-secondary">Advertiser </span>Services
+        </h2>
+        <p class="sec-icon"><i class="fa-solid fa-gear"></i></p>
+      </div>
+    </div> -->
+    <div class="row mt-5 mt-md-4 row-cols-1 row-cols-sm-1 row-cols-md-3 justify-content-center">
+      <div class="col">
+        <div class="service-card">
+          <div class="icon-wrapper">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3>No Food Wastage</h3>
+          <p>
+           Consume food when it is fresh with expiry alerts and donate excess food
+          </p>
+        </div>
+      </div>
+
+            <div class="col">
+        <div class="service-card">
+          <div class="icon-wrapper">
+            <i class="fa-solid fa-people-group"></i>
+           
+          </div>
+          <h3>Improve Health</h3>
+          <p>
+           Eat the fresh nutritious food recommended by your fitness trainer/  doctor/ nutritionist
+          </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="service-card">
+          <div class="icon-wrapper">
+            <i class="fa-regular fa-circle-check"></i>
+          </div>
+          <h3>Avoid Decision Fatigue</h3>
+          <p>
+           No repeated decision making of which brand/ store/ food item/ recipe to choose for ~100 items
+          </p>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <div class="service-card">
+          <div class="icon-wrapper">
+            <i class="fa-solid fa-money-check-dollar"></i>
+          </div>
+          <h3>Save Time
+</h3>
+          <p>
+            No multiple shopping trips/ apps, no manually grocery lists for weekly meal planning, buy from recipe directly
+          </p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="service-card">
+          <div class="icon-wrapper">
+             <i class="fa-solid fa-globe"></i>
+          </div>
+          <h3>Scalability</h3>
+          <p  id="faq">
+            The technology behind Richfeyn's smart containers could potentially be applied to other pantry staples or even non-food items, providing opportunities for scalability and growth.
+          </p>
+        </div>
+      </div>
+
+            <div class="col">
+        <div class="service-card">
+          <div class="icon-wrapper">
+            <i class="fa-solid fa-arrows-down-to-people"></i>
+          </div>
+          <h3>No Stress</h3>
+          <p>
+           Just in time delivery helps in having no worries of running out of stuff when user plans for parties
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ends of advantages -->
+
+<!-- faq section -->
+<div class="faq">
+<div><h1   class="faq_head">FAQs</h1><br></div>
+<div class="content">
+
+  <details open>
+  <summary>How does it save money ?</summary>
+  <div class="faq__content">
+    <p>There are many ways in which you can save money
+
+<li>
+App alerts you when you are food items are about to lose its freshness. This helps you consumes food at its best reducing health care costs due to consumption of less fresh food and waste 0 food and money spent on it due to expiry .
+
+</li>
+<li>
+ App ensures you reach your nutrition targets and stay healthy while your nutritionist / fitness trainer/ doctor can access your food consumption and contact if there are any changes required or make changes themselves (with your permission). This helps health care providers do more in less time and give quality feedback as they have historical data and save health care costs incurred due to improper nutrition .
+
+</li>
+<li>
+App helps you purchase just the right quantity of food items so you don't end up overstocking which saves you money and avoids wastage due to expiry of unused items .
+
+</li>
+<li>
+App helps you purchase just the right quantity of food items so you don't end up under-stocking and you run out of food items and since you need it urgently you might end up buying from wrong brand/company/s .
+
+</li></p>
+  </div>
+</details>
+<details>
+  <summary>How does it help me if I prefer shopping offline ?</summary>
+  <div class="faq__content">
+
+    <p>
+      <li>Grocery list will be prepared based on your available kitchen inventory without any errors. It gives you the freedom to go shopping anywhere anytime without having to plan in advance for grocery shopping.
+
+</li>
+<li>
+It will remind you of existing food items to use when they are about lose its freshness (expire or come close to use by date) .
+
+</li>
+<li>
+It will help share your consumption details (with nutrition tracker feature) to your personal fitness trainer/doctor/nutritionist .
+
+</li></p>
+  </div>
+</details>
+<details>
+  <summary>Why do I need this as I am using transparent containers where I can see when the food is running out?</summary>
+  <div class="faq__content">
+    <p>Our containers are also translucent where it can seen if the food is running out but there are close to 100 ingredients in the kitchen are in different quantities and they are consumed at different rates so you have to place order often. For a regular grocery shopping, you have to make a list of all the ingredients of all the recipes you want to eat. We all do this rough calculation manually. It is prone to errors. With RichFeyn solution, all this is automated meticulously precisely while also reducing the number of shopping trips or orders</p>
+  </div>
+</details>
+
+<details>
+  <summary>What happens when I travel out of town?</summary>
+  <div class="faq__content">
+    <p>When you go out of town, the kitchen items about to expire can be generated on the app for disposal or donation and when you are back, grocery lists will be prepared for you to order such that everything will be restocked at the right time in the right quantity as if you never left town</p>
+  </div>
+</details>
+<details>
+  <summary>How are the devices powered?</summary>
+  <div class="faq__content">
+    <p>Each container is powered by 2 AAA batteries and can run for 12 months without replacement. We will send you new batteries for replacement when you are about to run out.</p>
+  </div>
+</details>
+<details>
+  <summary>How does meal planner work?</summary>
+  <div class="faq__content">
+    <p>App  you plan meal for a date or week by choosing recipes and respective ingredients get added to the cart. On confirmation, they arrive just in time to ensure they are as fresh as possible when you are about to cook. Recipes can be customised by user to enable the right ingredients are added to the cart when these recipes are chosen to add to cart.  You can share your meal plans with your fitness trainer/nutritionist/family doctors</p>
+  </div>
+</details>
+
+<details>
+  <summary>Can I order different food items from different sellers ?</summary>
+  <div class="faq__content">
+    <p>Yes, you can. You can also set your preferences for different sellers, brands and delivery time slots</p>
+  </div>
+</details>
+
+<details>
+  <summary>How does it help me shop for parties/festivals ?</summary>
+  <div class="faq__content">
+    <p>App lets us choose number of people and recipes for the parties/festivals. It checks for the quantity of the required ingredients in your kitchen and prepared the grocery shopping list in the cart page.</p>
+  </div>
+</details>
+</div>
+</div>
+
+
+
+<!-- faq section ends here -->
+
+
+<!-- memes start here -->
+
+<!-- meme ends here -->
+
+
+<!-- footer -->
+ <footer id="Footer" class="page-footer font-small stylish-color-dark pt-4">
+      <div  class="container text-center text-md-left">
+        <div class="row">
+          <div class="col-md-4 mx-auto">
+            <!-- Content -->
+            
+            <h5 style="display: flex; flex-direction: row !important; align-items: center; justify-content: center;" class="flex-row font-weight-bold mt-3 fs-4 mb-4">
+              
+              <div class="logo">
+            <img src="{% static 'images/newlogo2.png'%}" alt="Logo Image">
+        </div>
+              RichFeyn</h5>
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+            <p>Richfeyn sells smart containers that monitor daily use of almonds and pulses, and automatically reorder when stock runs low. The containers are synced with an app and cloud server, providing a seamless and convenient experience for healthy snacking. Join Richfeyn today to enjoy hassle-free access to nutritious food.</p>
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div id="link10" class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          
+            <h6 class="text-uppercase font-weight-bold mt-5">Useful links</h6>
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 70px;">
+            <p>
+              <a href="{% url 'privacy'%}" class="privacy">Privacy and Policy</a>
+            </p>
+
+          </div>
+          <hr class="clearfix w-100 d-md-none">
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase font-weight-bold mt-5">Contact</h6>
+            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+            <p>
+              <i class="fas fa-home mr-3"></i> Mumbai, Maharashtra</p>
+            <p>
+              <i class="fas fa-envelope mr-3"></i> Reach us at contact@richfeyn.com</p>
+            <p>
+              <i class="fas fa-phone mr-3"></i> + 91 80254 52xxx</p>
+            <p>
+              <i class="fas fa-print mr-3"></i> + 91 80254 55xxx</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!-- Call to action -->
+      <ul  class="list-unstyled list-inline text-center py-2">
+        <li class="list-inline-item">
+          <h5 class="mb-1">Register for free</h5>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeP7PWrx9hIw5e6XWdNqCBRhQjBBCXhkO1zGxsa01DAJb_kAg/viewform" class="btn btn-outline-danger btn-rounded">Sign up!</a>
+        </li>
+      </ul>
+      <hr>
+      <!-- Social buttons -->
+      <div class="hover-effect1">
+      <ul   class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a href="https://www.facebook.com/codewithfaraz" title="Facebook"><i style="color:white;" class="fa fa-facebook"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.twitter.com/codewithfaraz" title="Twitter"><i class="fa fa-twitter"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.instagram.com/codewithfaraz" title="Instagram"><i class="fa fa-instagram"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.youtube.com/@codewithfaraz" title="Youtube"><i class="fa fa-youtube"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="#." title="Github"><i class="fa fa-github"></i></a>
+        </li>
+      </ul>
+    </div>
+      <!-- Copyright -->
+      <div   class="footer-copyright text-center py-3">
+       Made with love ❤
+      </div>
+    </footer>
+
+
+<!-- footer ends -->
+    <!--intro ends  -->
+
+
+   <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+      <script src="{% static 'js/script.js' %}"></script>
+    
+      <!-- <script src="https://vjs.zencdn.net/c/video.js"></script> -->
+          <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+           <script src="https://kit.fontawesome.com/4d0b4c932e.js" crossorigin="anonymous"></script>
+
+           <!-- jquery for fade -->
+   
+           
+</body>
+</html>

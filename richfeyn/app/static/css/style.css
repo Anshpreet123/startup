@@ -1,0 +1,788 @@
+/* navbar */
+ @import url('https://fonts.cdnfonts.com/css/baloo-bhai');
+
+/* navbar */
+*{
+    margin: 0;
+    padding: 0;
+    /* color: #f2f5f7; */
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    background-color: #000000 !important;
+}
+nav{
+    height: 4.5rem;
+    width: 100vw;
+    /* background-color: #292828; */
+    background-color: none;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+
+}
+nav.scroll{
+     background-color: #292828;
+     transition: 0.3s ease-in-out;
+}
+
+/*Styling logo*/
+.logo{
+    padding:1vh 1vw;
+    text-align: center;
+}
+.logo img {
+    height: 4rem;
+    width: 7rem;
+}
+
+/*Styling Links*/
+.nav-links{
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    transform: translateY(10px);
+    align-items: center;
+    text-transform: uppercase;
+}
+.nav-links li a{
+    text-decoration: none;
+    margin: 0 0.7vw;
+    color: #fff;
+}
+.nav-links li a:hover {
+    color: #53f04d;
+}
+.nav-links li {
+    position: relative;
+}
+/* .nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #0c4413;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+} */
+.nav-links li a:hover::before{
+    width: 80%;
+}
+
+/*Styling Buttons*/
+.login-button{
+        text-decoration: none;
+    margin: 0 0.7vw;
+    color: #fff;
+    background-color: transparent;
+    border: 1.5px solid #f2f5f7;
+    border-radius: 2em;
+    padding: 0.6rem 0.8rem;
+    margin-left: 2vw;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+.login-button:hover {
+    color: #131418;
+    background-color: #f2f5f7;
+    border:1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+.join-button{
+    color: #09f829;
+    background-color: none;
+    border: 2px solid #54ff4e;
+    border-radius: 1em;
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+ transform: -50% ;   
+}
+.join-button:hover {
+    color: none !important;
+    background-color: transparent;
+    border:1.5px solid #f2f5f7;
+    transition: all ease-in-out 350ms;
+}
+.join-button ::before{
+     content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: none;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 800px){
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: #131418;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 1;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+/* navbar ends */
+
+/* intro css */
+
+.contain{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    border: 2px solid red;
+    height: 100vh;
+    margin: auto;
+    margin-top: 0;
+
+}
+@media only screen and (max-width: 600px) {
+.contain{
+    display: flex;
+    flex-direction: column;
+}
+}
+.left{
+    border: 2px solid red;
+width: 50%;
+text-align: center;
+align-items: center;
+justify-content: center;
+
+color: #131418;
+}
+.right{
+    color: #131418;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid red;
+width: 50%;
+text-align: center;
+align-items: center;
+}
+.head{
+    
+    font-size: 20px;
+    color: black;
+}
+
+/* image box css */
+
+.container {
+	 display: flex;
+	 width: 100%;
+}
+ .item {
+	 width: 33.3333333333%;
+	 margin: 10px;
+}
+ .images {
+	 max-width: 100%;
+	 height: auto;
+}
+/* image box css ends */
+ 
+/* How it works section starts  */
+
+.main_contain{
+    margin-top: 100px !important;
+    width: 100%;
+    height: fit-content;
+   
+    text-align: center;
+    display: block;
+    color: #fff;
+    font-family: 'baloo bhai 2';
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    
+
+}
+.main_head{
+    width: 80%;
+    height: 20vh;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+
+}
+.head_text{
+    font-size: 40px;
+    font-weight: bolder;
+
+}
+.head_content{
+    font-size: 2.1 rem;
+    font-size: 18px;
+    font-weight: 400;
+
+}
+.flow_chart{
+    /* this div contains the image */
+    width: 80%;
+    height: fit-content;
+    min-height: 300px;
+    align-items: center;
+    margin: auto;
+    justify-content:center;
+}
+.flow_img{
+width: 80% ;
+height: 80%;
+box-shadow: 0 10px 10px -5px;
+ 
+}
+@media only screen and (max-width: 600px) {
+
+.main_contain{
+    width: 100%;
+    height: 85vh;
+    text-align: center;
+    display: block;
+    color: #131418;
+    font-family: 'baloo bhai 2';
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    
+
+}
+.main_head{
+    width: 80%;
+    height: 20vh;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.head_text{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+.head_content{
+    font-size: 0.8rem;
+    font-weight: 400;
+
+}
+.flow_chart{
+    /* this div contains the image */
+    width: 80%;
+    height: 30vh;
+    align-items: center;
+    margin: auto;
+    justify-content:center;
+}
+.flow_img{
+width: 110% ;
+height: 70%;
+
+ 
+}
+
+}
+
+/* advantages of the product */
+
+.sec-icon {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.sec-icon::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  left: -70px;
+  margin-top: -5.5px;
+  top: 60%;
+  background: #333333;
+  width: 50px;
+}
+
+.sec-icon::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  right: -70px;
+  margin-top: -5.5px;
+  top: 60%;
+  background: #333;
+  width: 50px;
+}
+
+.advertisers-service-sec {
+  background-color: #000000;
+}
+
+.advertisers-service-sec span {
+  color: rgb(23, 255, 62);
+}
+
+.advertisers-service-sec .col {
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.advertisers-service-sec p{
+    color: #fff;
+    z-index: 1000;
+}
+.advertisers-service-sec .service-card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  border-radius: 5px;
+  color: #fff !important;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+    background-color: rgba(78, 75, 75, 0.1);
+     backdrop-filter: blur(30px);
+
+}
+
+.advertisers-service-sec .service-card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#6dff0c,#0af531 ,#9fff51,#ffffff);
+  position: absolute;
+  left: 0%;
+  top: -98%;
+  z-index: -2;
+  transition: all 0.4s cubic-bezier(0.77, -0.04, 0, 0.99);
+}
+
+.advertisers-service-sec h3 {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 1em 0;
+  z-index: 3;
+}
+
+.advertisers-service-sec p {
+  /* color: #575a7b; */
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  z-index: 3;
+}
+
+.advertisers-service-sec .icon-wrapper {
+  background-color: #2c7bfe;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+  z-index: 3;
+}
+
+.advertisers-service-sec .service-card:hover:after {
+  top: 0%;
+}
+
+.service-card .icon-wrapper {
+  background-color: #ffffff;
+    color: rgb(23, 255, 62);
+
+}
+
+.advertisers-service-sec .service-card:hover .icon-wrapper {
+  color: #0c4413;
+}
+
+.advertisers-service-sec .service-card:hover h3 {
+  color: #000000;
+}
+
+.advertisers-service-sec .service-card:hover p {
+  color: #000000;
+}
+
+/* advatgaes of the product ends here */
+
+/* faq css */
+.faq{
+    background:#000000;
+
+}
+.faq_head{
+    margin-left: 10%;
+    font-family: 'baloo bhai 2';
+    font-weight: bolder;
+    font-family: 'Lucida Sans Unicode','Lucida Grande','Lucida Sans','DejaVu Sans Condensed',sans-serif;
+    font-weight: 800;
+    color: #fff;
+
+}
+.faq__content{
+    color: #fff;
+}
+.content {
+  width: 80%;
+  padding: 0;
+  margin: 0 auto;
+}
+summary {
+  font-size: 1.0rem;
+  font-weight: 600;
+  background-color: #fff;
+  
+  color: #333;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  border-radius: 0.25rem;
+  text-align: left;
+  cursor: pointer;
+  position: relative;
+}
+details > summary::after {
+  position: absolute;
+  content: "+";
+  right: 20px;
+}
+details[open] > summary::after {
+  position: absolute;
+  content: "-";
+  right: 20px;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+summary{
+    border-radius: 100px;
+      background-color: rgba(78, 75, 75, 0.1);
+      color: #fff;
+  /* border: 1px solid rgba(255,255,255,0.1); */
+  border: 1px solid rgb(255, 255, 255);
+
+  backdrop-filter: blur(30px);
+  cursor: pointer;
+}
+summary:hover{
+    background-color: rgba(87, 85, 85, 0.2);
+}
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+@keyframes sweep {
+  0%    {opacity: 0; margin-top: -10px}
+  100%  {opacity: 1; margin-top: 0px}
+}
+/* faq css done */
+
+/* memes css */
+
+/* meme css done */
+
+/* home view */
+.half-half-image-text {
+	 padding: 70px 0px;
+}
+ .half-half-image-text h1 {
+	 color: #800000;
+}
+ .half-half-image-text .content {
+	 height: 100%;
+	 display: flex;
+	 align-items: center;
+	 padding: 35px 0px;
+}
+ .half-half-image-text .content p {
+	 font-size: 22px;
+}
+ .half-half-image-text .img {
+	 min-height: 300px;
+	 height: 80%;
+	 border-radius: 10px;
+     /* box-shadow: 0 0 5px; */
+}
+
+ /* home view ends */
+
+/* carowsel css */
+ 
+
+    .containers {
+        position: relative;
+        width: 80%;
+        height: 700px;
+        margin: 20px auto;
+    }
+
+    .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 700px;
+        margin: 0;
+        opacity: 0;
+        transition: 1s ease-in-out;
+        overflow: hidden;
+    }
+
+    .slide img {
+        width: 100%;
+    }
+
+    /* button {
+        position: absolute;
+        top: 50%;
+        border: none;
+        background: rgba(32, 26, 26, 0.527);
+        color: rgb(243, 243, 243);
+        padding: 10px 16px;
+        margin-top: -25px;
+        font-size: 30px;
+        z-index: 1000;
+        font-weight: 900;
+        transition: 0.5s ease-in-out;
+    } */
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+
+
+    button:hover {
+        background: rgba(32, 26, 26, 0.527);
+    }
+
+    .dots_containers {
+        display: flex;
+        margin: 5px auto;
+        width: fit-content;
+    }
+
+    .dots {
+        height: 12px;
+        width: 12px;
+        border-radius: 50%;
+        background: #bdbdbd;
+        margin: 4px;
+    }
+
+    .dots:hover {
+        background: #696969 !important;
+    }
+
+    #mobile{
+        display: none;
+    }
+    @media screen and (max-width:600px) {
+      .slide{
+        height:fit-content;
+      }
+      .containers{
+height:200px;}
+    button {
+        top: 50%;
+    }
+    }
+
+    /* making a different slider for mobile */
+#phone{
+    display: none;
+}
+        @media screen and (max-width:600px) {
+            #mobile{
+                display: block;
+            }
+            #phone {
+                display: block;
+            }
+    }
+/* carowsel css ends */
+
+
+/* footer css starts */
+footer{
+    background-color: #000;
+    color: white !important;
+    border-top: 2px solid #fff;
+}
+
+.hover-effect1 {
+  min-height: 20px;
+  text-align: center;
+}
+.hover-effect1 ul {
+ padding-top: 1px;
+}
+.hover-effect1 ul li {
+ display: inline-block;
+}
+.hover-effect1 ul li a {
+ font-size: 30px;
+ text-align: center;
+ color: #fff;
+ margin: 0px 10px;
+ line-height: 50px;
+ display: inline-block;
+ width: 50px;
+ height: 50px;
+ background:black;
+ -webkit-transition: all .6s ease;
+ -moz-transition: all .6s ease;
+ -ms-transition: all .6s ease;
+ -o-transition: all .6s ease;
+ transition: all .6s ease;
+}
+.hover-effect1 ul li:hover a {
+  border-radius: 50%;
+  background: #0c4413;
+ -moz-transform: rotate(360deg);
+ -webkit-transform: rotate(360deg);
+ -o-transform: rotate(360deg);
+ -ms-transform: rotate(360deg);
+ transform: rotate(360deg);
+}
+
+/* footer css ends */
+
+/* For video */
+
+
+.video-wrapper {
+ display: none;
+    padding-bottom: 74.25%;  
+    padding-top: 30px; 
+
+    overflow: hidden;
+    
+}
+
+.video-wrapper-narrow {
+    padding-bottom: 40%;
+}
+
+iframe,object,embed,video,.videoWrapper,.video-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+}
+
+.about{
+
+text-align: center;
+}
+.privacy{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+p{
+    color: #fff;
+}
