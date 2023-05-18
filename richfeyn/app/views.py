@@ -22,7 +22,7 @@ def form(request):
         comment = request.POST['comment']
         newdata = signup(name = name , email = email , city = city , phone = phone , comment = comment )
         newdata.save()
-        return render (request, 'form.html')
+        return render (request, 'home.html')
 
 # def formsub(request):
 #     if request.method == 'POST':

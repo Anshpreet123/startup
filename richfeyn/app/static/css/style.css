@@ -100,21 +100,16 @@ nav.scroll{
     transition: all ease-in-out 350ms;
 }
 .join-button{
-    color: #09f829;
+    color: #09f829 !important;
     background-color: none;
-    border: 2px solid #54ff4e;
+  
     border-radius: 1em;
     padding: 0.6rem 0.8rem;
     font-size: 1rem;
     cursor: pointer;
  transform: -50% ;   
 }
-.join-button:hover {
-    color: none !important;
-    background-color: transparent;
-    border:1.5px solid #f2f5f7;
-    transition: all ease-in-out 350ms;
-}
+
 .join-button ::before{
      content: "";
     display: block;
@@ -439,7 +434,7 @@ height: 70%;
   content: "";
   width: 100%;
   height: 100%;
-  background: linear-gradient(#6dff0c,#0af531 ,#9fff51,#ffffff);
+  background: linear-gradient(#20221e,#556858 ,#9fb4a2  );
   position: absolute;
   left: 0%;
   top: -98%;
@@ -631,7 +626,7 @@ details[open] summary ~ * {
         width: 100%;
     }
 
-    /* button {
+    button {
         position: absolute;
         top: 50%;
         border: none;
@@ -643,7 +638,7 @@ details[open] summary ~ * {
         z-index: 1000;
         font-weight: 900;
         transition: 0.5s ease-in-out;
-    } */
+    }
 
     .prev {
         left: 0;
