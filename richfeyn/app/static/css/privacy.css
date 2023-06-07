@@ -1,5 +1,8 @@
 .faq{
-    margin-top: 55px;
+    margin-top: 55px !important;
+}
+.faq_head{
+    margin-top: 100px !important;
 }
 nav{
     height: 4.5rem;

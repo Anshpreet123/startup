@@ -1,0 +1,186 @@
+/**Typeo CSS Start**/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+* {
+ box-sizing: border-box;
+}
+
+body {
+ font-family: "Poppins", sans-serif;
+ color: #444;
+ box-sizing: border-box;
+ margin: 0px;
+}
+
+img {
+ max-width: 100%;
+}
+
+/**Typeo CSS End**/
+.video-custom {
+ margin: 120px auto;
+ max-width: 800px;
+ position: relative;
+}
+
+.video-custom .poster-img {
+ display: block;
+}
+
+.video-custom video {
+ position: absolute;
+ left: 0px;
+ top: 0px;
+ display: block;
+ width: 100%;
+ height: 100%;
+ opacity: 0;
+}
+
+.video-custom .play-btn, .video-custom .pause-btn {
+ position: absolute;
+ left: 0px;
+ right: 0px;
+ bottom: 0px;
+ top: 0px;
+ margin: auto;
+ width: 60px;
+ height: 60px;
+ border-radius: 100%;
+ background-color: rgba(255, 255, 255, 0.5);
+ z-index: 3;
+ cursor: pointer;
+ transition: 0.5s all;
+ overflow: hidden;
+}
+
+.video-custom .pause-btn {
+ display: none;
+}
+
+.video-custom .play-btn i {
+ width: 0;
+ height: 0;
+ border-style: solid;
+ border-top: 15px solid transparent;
+ border-bottom: 15px solid transparent;
+ border-left: 18px solid #000000;
+ border-right: 0;
+ position: absolute;
+ left: 0px;
+ right: 0px;
+ bottom: 0px;
+ top: 0px;
+ margin: auto;
+}
+
+.pause-btn i {
+ position: absolute;
+ left: -3px;
+ right: 0px;
+ bottom: 0px;
+ top: 2px;
+ margin: auto;
+ width: 16px;
+ height: 24px;
+ flex-flow: row wrap;
+}
+
+.pause-btn i:before {
+ content: '';
+ width: 4px;
+ height: 100%;
+ background-color: #000;
+ display: inline-block;
+}
+
+.pause-btn i:after {
+ content: '';
+ width: 4px;
+ height: 100%;
+ margin-left: 8px;
+ background-color: #000;
+ display: inline-block;
+}
+
+.playvideo .video-custom img {
+ opacity: 0;
+}
+
+.playvideo .video-custom video {
+ opacity: 1;
+}
+
+.video-custom .vplay {
+ display: none;
+}
+
+.video-custom:hover .vplay + .pause-btn {
+ display: block;
+}
+
+/***Volume Control***/
+html:not(.playvideo) .sound-ctrl {
+ display: none;
+}
+
+.sound-ctrl {
+ position: absolute;
+ z-index: 2;
+ right: 14px;
+ bottom: 5px;
+ cursor: pointer;
+}
+
+.sound-ctrl .on-button {
+ display: none;
+}
+
+.sound-ctrl img {
+ opacity: 0;
+}
+
+.sound-ctrl .off-button, .sound-ctrl .on-button {
+ position: absolute;
+ left: 0px;
+ top: 0px;
+ font-size: 0px;
+ background-color: transparent;
+ border: none;
+ width: 100%;
+ height: 100%;
+ padding: 0px;
+ cursor: pointer;
+}
+
+.soundctrlshow .on-button {
+ display: block;
+}
+
+.soundctrlshow .off-button {
+ display: none;
+}
+
+.playvideo .video-custom .sound-ctrl img {
+ opacity: 1;
+}
+
+.soundctrlshow .on-button:before {
+ content: '';
+ position: absolute;
+ left: 12px;
+ top: -5px;
+ z-index: 10;
+ width: 3px;
+ height: 32px;
+ background-color: #fff;
+ transform: rotate(45deg);
+}
+
+/***Volume Control***/
+@media(max-width:800px) {
+ .video-custom {
+  width: calc(100% - 20px);
+ }
+
+}

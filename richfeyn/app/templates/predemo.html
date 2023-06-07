@@ -1,0 +1,42 @@
+{% extends "main.html" %}
+
+
+{% block title%}
+
+Product demo
+
+{% endblock%}
+
+{% block extra_head %}
+{% load static%}
+
+    <link rel="stylesheet" href=" {% static 'css/predemo.css'%}"/>
+
+{% endblock %}
+
+
+{% block content%}
+
+{% load static %}
+<div class="video-custom">
+ <div class="play-pause"><span class="play-btn" id="play_button"><i></i></span><span id="pause_button" class="pause-btn"><i></i></span></div>
+ <img class="poster-img" src="https://tinypic.host/images/2023/02/03/201288874455.jpg" alt="Model Popup">
+ <video id="video" width="100%" poster="https://tinypic.host/images/2023/02/03/201288874455.jpg">
+  <source src="{% static 'videos/CUSH1.mp4'%}" data-wf-ignore="true">
+ </video>
+ <!--Volume Control Start-->
+ <div class="sound-ctrl">
+  <img src="https://coderwrap.com/wp-content/uploads/2023/01/volume-icon.svg" alt="Volume">
+  <button class="off-button" id="sound-off" type="button">OFF</button>
+  <button class="on-button" id="sound-on" type="button">ON</button>
+ </div>
+ <!--Volume Control End-->
+</div>
+{% endblock%}
+
+
+  {% block script %}
+      
+      <script src="{% static 'js/predemo.js' %}"></script>
+
+      {% endblock %}

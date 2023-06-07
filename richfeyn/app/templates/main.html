@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href=" {% static 'css/main.css'%}"/>
+    <link rel="stylesheet" href=" {% static 'css/input.css'%}"/>
+{% block extra_head%}
+
+{% endblock %}
+
+    <link rel="stylesheet" href=/>
+    <link rel="icon" href="{% static 'images/ds/black.png'%}" type="image/icon type" sizes="100x100">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <!-- ends -->
+
+   <!-- bootstrap cdn -->
+       <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
+  <!-- for video -->
+    <!-- <link rel="stylesheet" href="https://vjs.zencdn.net/c/video-js.css"/> -->
+
+    <title>{% block title%} RichFeyn {% endblock%}</title>
+
+  
+</head>
+<body >
+    <!-- navbar starts -->
+
+
+    <!-- <header class="RichFeyn" id =" RichFeyn"
+style="text-align: center;
+font-size: 2rem;
+color: #ee1a1a !important;">
+RichFeyn
+</header> -->
+        <div id="RichFeyn">
+            <!-- <img src="{% static 'images/ds/name1.png'%}" alt="Logo Image"> -->
+            RichFeyn
+        </div>
+
+
+    <nav id="navbar">
+
+        <div class="logo">
+            <img src="{% static 'images/logo/logo/black icon/Website logo.png'%}" alt="Logo Image">
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{% url 'home'%}">Home</a></li>
+            <li><a href="#hiw">How it works</a></li>
+            <!-- <li><a onclick="change()" href="#">Product demo</a></li> -->
+            <li><a  href="#features">Features</a></li>
+            <li><a  href="{% url 'predemo'%}">Product demo</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#Footer">About us</a></li>
+            <li><a class="join-button" href=" {% url 'formview'%}">Preorder</a></li>
+        </ul>
+    </nav>
+    <br>
+    <!-- nav ends -->
+
+{% block content%}
+
+{% endblock%}
+
+<!-- footer -->
+<footer id="Footer" class="section bg-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="">
+                        <h6 class="footer-heading text-uppercase text-white">Services</h6>
+                        <ul class="list-unstyled footer-link mt-4">
+                            <li><a class="aa" href="{% url 'comingsoon'%}">Pages</a></li>
+                            <li><a class="aa" href="{% url 'comingsoon'%}">Our Team</a></li>
+                            <li><a class="aa" href="#features">Features</a></li>
+                            <li><a class="aa" href="{% url 'comingsoon'%}">Pricing</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-2">
+                    <div class="">
+                        <h6 class="footer-heading text-uppercase text-white">Need help ?</h6>
+                        <ul class="list-unstyled footer-link mt-4">
+                            <li><a class="aa" href="{% url 'comingsoon'%}">Shipping Services</a></li>
+                            <li><a class="aa" href="{% url 'comingsoon'%}">Payment Options</a></li>
+                            <li><a class="aa" href="{% url 'comingsoon'%}">Returns & Exchanges</a></li>
+                          <li><a class="aa" href="{% url 'comingsoon'%}">Product Care</a></li>
+                          <li><a class="aa" href="#faq">FAQs</a></li>
+                          <li><a class="aa" href="{% url 'comingsoon'%}">Unsubscribe</a></li>
+                          <li><a class="aa" href="{% url 'comingsoon'%}">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+              
+              <!--   new block             -->
+              
+               <div class="col-lg-2">
+                    <div class="">
+                        <h6 class="footer-heading text-uppercase text-white">The company</h6>
+                        <ul class="list-unstyled footer-link mt-4">
+                            <li><a class="aa" href="{% url 'comingsoon'%}">About RichFeyn</a></li>
+                            <li><a class="aa" href="{% url 'privacy'%}">Privacy & Policy</a></li>
+                            <li><a class="aa" href="{% url 'comingsoon'%}">Legal</a></li>
+                            <li><a class="aa" href="{% url 'comingsoon'%}">Corporate Information</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+<!--    ends            -->
+              
+<!--   new block             -->
+              
+               <div class="col-lg-3">
+                    <div class="">
+                        <h6 class="footer-heading text-uppercase text-white">find us on</h6>
+                        <ul class="list-unstyled footer-link mt-4">
+                            <li><a class="aa" href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2F%3Fsk%3Dwelcome" target="_blank"><i id="social-fb" class="fa fa-facebook social bg-black"></i> &nbsp Facebook</a></li>
+                            <li><a class="aa" href="https://twitter.com/RichFeyn_ofc
+" target="_blank"><i id="social-tw" class="fa fa-twitter social bg-black"></i> &nbsp Twitter</a></li>
+                            <li><a class="aa" href="https://www.instagram.com/richfeyn_official/" target="_blank"><i id="social-in" class="fa fa-instagram social bg-black"></i> &nbsp Instagram</a></li>
+                            <li><a class="aa" href="https://www.youtube.com/@richfeyn" target="_blank"><i id="social-yt" class="fa fa-youtube social bg-black"></i> &nbsp YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+<!--    ends            -->
+                <div class="col-lg-2 " class="last_sec">
+                    <div class="">
+                        <h6  class="footer-heading text-white">Contact Us</h6>
+                        <ul class="list-unstyled footer-link mt-4">
+<ul class="list-unstyled footer-link mt-2">
+                            <p class="foot_data"><i class="fa fa-home"></i>&nbsp Bangalore, India</p>
+                            <p class="foot_data" ><i class="fa fa-mail-bulk"></i>&nbsp Reach us at 
+<a onclick="sendEmailDefault()" style="cursor: pointer;">app4richfeyn@gmail.com</a> </p>
+                            <p class="foot_data" ><i class="fa fa-phone"></i>&nbsp 091-9901306996
+ </p>
+                        </ul>
+                            <!-- <p style=" " class="foot_data" >By entering your email address below, you consent to receiving product updates with access to our latest collections, events and initiatives.More details on this are provided in our <a  style="text-decoration: none; color: #acacac;  text-decoration: underline; display: inline;" href="{% url 'privacy'%}">Privacy Policy</a></p> -->
+                             
+                  
+                            <!-- <form class="newsletter" method="post" action>{% csrf_token%}
+                             <input class="effect-12" style="color: #fff !important;" type="email" name="newsletter" class="input-text" placeholder="Email">
+
+                            
+                            <h6  class="footer-heading text-uppercase text-white mt-5">Store Locator</h6>
+                        <ul class="list-unstyled footer-link mt-2">
+                            <p class="foot_data">Mumbai, Maharashtra, India</p>
+                            
+                            
+                        </ul>
+                           </form> -->
+
+                                <!-- Social buttons -->
+      <!-- <div class="hover-effect1 mt-5">
+      <ul   class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a href="https://www.facebook.com/codewithfaraz" title="Facebook"><i style="color:white;" class="fa fa-facebook"></i></a>
+        </li>
+       <li class="list-inline-item">
+          <a href="https://www.facebook.com/codewithfaraz" title="Facebook"><i style="color:white;" class="fa fa-facebook"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.facebook.com/codewithfaraz" title="Facebook"><i style="color:white;" class="fa fa-facebook"></i></a>
+        </li>
+        <li class="list-inline-item">
+          <a href="https://www.facebook.com/codewithfaraz" title="Facebook"><i style="color:white;" class="fa fa-facebook"></i></a>
+        </li>
+      </ul>
+    </div> -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- <div class="col-lg-4">
+                    <div class="">
+                        <h6 class="footer-heading text-uppercase text-white">Contact Us</h6>
+                        <p class="contact-info mt-4">Contact us if need help withanything</p>
+                        <p class="contact-info">+01 123-456-7890</p>
+                        <div class="mt-5">
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a href="#"><i class="fab facebook footer-social-icon fa-facebook-f"></i></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fab twitter footer-social-icon fa-twitter"></i></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fab google footer-social-icon fa-google"></i></i></a></li>
+                                <li class="list-inline-item"><a href="#"><i class="fab apple footer-social-icon fa-apple"></i></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+
+        <div class="text-center mt-3">
+            <p class="footer-alt mb-0 f-14">© Copyright 2023 - RichFeyn. All rights reserved.</p>
+        </div>
+    </footer>
+
+<!-- footer ends -->
+    <!--intro ends  -->
+
+
+   <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    
+      {% block script %}
+
+      {% endblock%}
+      <!-- <script src="https://vjs.zencdn.net/c/video.js"></script> -->
+          <script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+           <script src="https://kit.fontawesome.com/4d0b4c932e.js" crossorigin="anonymous"></script>
+
+           <!-- jquery for fade -->
+   
+           
+</body>
+</html>

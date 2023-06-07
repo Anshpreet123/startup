@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+{% block title%}
+
+Coming Soon
+{% endblock%}
+
+{% block extra_head %}
+{% load static%}
+
+    <link rel="stylesheet" href=" {% static 'css/coming_soon.css'%}"/>
+
+{% endblock %}
+
+{% block content%}
+<section>
+  <canvas id='beerCanvas'></canvas>
+  <div class="coming_content">
+    <h1 class="coming">Coming Soon</h1>
+    <div class="separator_container">
+      <!-- <div class="separator line_separator">
+   
+      </div> -->
+    </div>
+    <h3 class="moto">Unleashing the future, right at your fingertips</h3>
+  </div>
+</section>
+{% endblock%}
+
+  {% block script %}
+      <script src="{% static 'js/coming_soon.js' %}"></script>
+
+      {% endblock %}
